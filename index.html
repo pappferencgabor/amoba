@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amőba</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Amőba 3x3</h1>
+    <div id="palya">
+        <button onclick="Kattintas(1)" id="btn1"></button>
+        <button onclick="Kattintas(2)" id="btn2"></button>
+        <button onclick="Kattintas(3)" id="btn3"></button>
+        <button onclick="Kattintas(4)" id="btn4"></button>
+        <button onclick="Kattintas(5)" id="btn5"></button>
+        <button onclick="Kattintas(6)" id="btn6"></button>
+        <button onclick="Kattintas(7)" id="btn7"></button>
+        <button onclick="Kattintas(8)" id="btn8"></button>
+        <button onclick="Kattintas(9)" id="btn9"></button>
+    </div>
+
+    <button class="torol" type="button" onclick="document.location.reload()">Pálya törlése</button>
+
+    <script>
+        //VÁLZOTÓ
+        let xJatszik = true;
+
+        function Kattintas(id_szam){
+            // MEGFOGUJK A GOMBOT
+            let gomb = document.getElementById("btn"+id_szam)
+            if (xJatszik){
+                // CSINÁLJUK EZT HA X JÁTSZIK
+                gomb.innerHTML = "x";
+            }
+            else {
+                // CSINÁLJUK EZT HA NEM X JÁTSZIK
+                gomb.innerHTML = "o";
+            }
+            xJatszik = !xJatszik
+        }
+    </script>
+</body>
+
+</html>
